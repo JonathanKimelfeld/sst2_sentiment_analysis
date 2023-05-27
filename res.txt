@@ -1,0 +1,9 @@
+Model: bert-base-uncased
+Mean accuracy: 0.5038
+Standard deviation of accuracy: 0.0084
+Model: roberta-base
+Mean accuracy: 0.5092
+Standard deviation of accuracy: 0.0000
+Model: google/electra-base-generator
+Mean accuracy: 0.5031
+Standard deviation of accuracy: 0.0086
