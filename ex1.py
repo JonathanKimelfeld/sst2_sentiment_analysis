@@ -7,7 +7,8 @@ import wandb
 import datasets
 import sys
 
-wandb.login(key="79632defaeeb483a925b9a8dbce7414432eea228")
+# wandb.login(key="79632defaeeb483a925b9a8dbce7414432eea228")
+
 BERT = "bert-base-uncased"
 ROBERTA = "roberta-base"
 ELECTRA_BASE = "google/electra-base-generator"
@@ -18,14 +19,14 @@ num_train_samples = int(sys.argv[2])
 num_val_samples = int(sys.argv[3])
 num_pred_samples = int(sys.argv[4])
 
-NUM_SEEDS = 3
+# NUM_SEEDS = 3
 
 # Load sst2 dataset and define the three models
 dataset = datasets.load_dataset("sst2")
 model_names = [BERT, ROBERTA, ELECTRA_BASE]
 
 # seed num
-num_seeds = NUM_SEEDS
+# num_seeds = NUM_SEEDS
 
 # A dict of accuracies per model
 accuracies = {}
@@ -109,7 +110,7 @@ for model_name in model_names:
         )
 
         # Initialize Weights&Biases
-        wandb.init(project="sentiment-analysis", config=training_args)
+        # wandb.init(project="sentiment-analysis", config=training_args)
 
         # Train the model
         trainer.train()
@@ -134,7 +135,7 @@ for model_name in model_names:
         model_accuracies.append(accuracy)
 
         # Finish the Weights&Biases run
-        wandb.finish()
+        # wandb.finish()
 
     # Store the accuracies for the current model
     accuracies[model_name] = model_accuracies
