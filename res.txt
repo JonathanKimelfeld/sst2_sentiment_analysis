@@ -1,9 +1,14 @@
 Model: bert-base-uncased
 Mean accuracy: 0.9182
 Standard deviation of accuracy: 0.0033
+Average Training Time: 53m 49s
+
 Model: roberta-base
 Mean accuracy: 0.9251
 Standard deviation of accuracy: 0.0030
+Average Training Time: 54m 50s
+
 Model: google/electra-base-generator
 Mean accuracy: 0.9067
 Standard deviation of accuracy: 0.0011
+Average Training Time: 11m 10s
